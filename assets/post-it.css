@@ -1,0 +1,90 @@
+/* ESERCIZIO 1: Un effetto di transizione/trasformazione per creare una lavagna con dei post-it che si animano al passaggio del mouse, la transizione dovrà essere graduale. */
+body {
+  background-color: #666666;
+}
+main {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  margin: 5px;
+  height: 100vh;
+  gap: 40px;
+  flex-direction: row;
+  align-content: center;
+}
+.box {
+  width: 20%;
+  height: 200px;
+  box-sizing: border-box;
+  display: flex;
+  align-content: center;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.39);
+  transition: transform 0.3s ease;
+}
+.box h1 {
+  font-family: "Indie Flower";
+  font-size: 40px;
+  font-weight: bold;
+}
+.box p {
+  font-family: "Indie Flower";
+  font-size: 30px;
+  margin-top: 15px;
+}
+#box1 {
+  background-color: #f1f2bc;
+  transform: rotate(-5deg);
+}
+#box2 {
+  background-color: #b6d9b7;
+  display: flex;
+  transform: rotate(5deg);
+}
+#box3 {
+  background-color: #c2c3ec;
+  display: flex;
+  transform: rotate(-5deg);
+}
+#box4 {
+  background-color: #b6d9b7;
+  display: flex;
+  transform: rotate(5deg);
+}
+#box5 {
+  background-color: #f1f2bc;
+  display: flex;
+  transform: rotate(-5deg);
+}
+#box6 {
+  background-color: #c2c3ec;
+  display: flex;
+  transform: rotate(-5deg);
+}
+#box7 {
+  background-color: #f1f2bc;
+  display: flex;
+  transform: rotate(-5deg);
+}
+#box8 {
+  background-color: #b6d9b7;
+  display: flex;
+  transform: rotate(5deg);
+}
+
+.box:hover {
+  transform: rotate(0deg) scale(1.2);
+}
+#box1:hover,
+#box2:hover,
+#box3:hover,
+#box4:hover,
+#box5:hover,
+#box6:hover,
+#box7:hover,
+#box8:hover {
+  transform: rotate(0deg) scale(1.2);
+}
