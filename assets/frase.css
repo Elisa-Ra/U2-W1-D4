@@ -1,0 +1,77 @@
+/* ESERCIZIO 2: Un effetto di animazione ciclica su un set di 3 parole presenti alla fine di una frase per far sì che l'ultima parola di questa frase cambi in automatico, facendo apparire di volta in volta una delle 3 parole del set. l'animazione prevede che la parola compaia in assolvenza dall'alto e poi vada in dissolvenza verso il basso; una volta scomparsa apparirà la nuova parola.
+1 creazione del testo e formattazione di 1 parola da far ruotare
+2 inserimento delle altre 2 parole
+3 sovrapporre le 3 parole
+4 mostrare 1 parola e nascondere le altre 2
+5 animare 1 parola (fadein - fadeout con spostamento)
+6 animare le altre 2 parole
+7 ritardare progressivamente l'animazione delle altre 2 parole 
+*/
+
+main {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  font-family: "Bree Serif";
+  color: #333333;
+}
+
+#testoAlternato {
+  border: 1px solid #333333;
+  padding: 10px;
+  height: 50px;
+  width: 500px;
+}
+
+.parole {
+  color: #6d899c;
+  position: relative;
+  display: inline-block;
+  width: 160px;
+  height: 1em;
+  vertical-align: middle;
+}
+
+.parole i {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  opacity: 0;
+  animation: parole 6s infinite;
+}
+
+@keyframes parole {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  10% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  30% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  40% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+}
+
+.parole i:nth-child(1) {
+  animation-delay: 0s;
+}
+.parole i:nth-child(2) {
+  animation-delay: 2s;
+}
+.parole i:nth-child(3) {
+  animation-delay: 4s;
+}
